@@ -4,7 +4,6 @@
 	<comment></comment>
 	<projects>
 		<project>AlisaPredefined</project>
-		<project>CyberPhysical</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
