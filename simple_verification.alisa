@@ -1,0 +1,6 @@
+assurance case simple_case for Simple_system::Computation_chain [
+	assurance plan simple_plan for Simple_system::Computation_chain.Impl [
+		description "my plan"
+		assure simple_plan
+	]
+]

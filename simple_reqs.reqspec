@@ -1,0 +1,5 @@
+system requirements simple_reqs for Simple_system::Computation_chain.Impl [
+	requirement R1 : "response time limit" [
+		description this " shall have a global computation time within specified bounds"
+	]
+]

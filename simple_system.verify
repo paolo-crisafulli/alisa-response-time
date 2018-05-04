@@ -1,0 +1,7 @@
+verification plan simple_plan for simple_reqs [
+	claim R1 [
+		activities
+		responsetime : Plugins.FlowLatencyAnalysis ( )
+		assert responsetime
+	]
+] 
