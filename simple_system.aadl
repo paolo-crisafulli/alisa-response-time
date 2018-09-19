@@ -1,5 +1,6 @@
 package Simple_system
 public
+	with requirement_params;
 	system Computation_chain
 		features
 			datain: in data port;
@@ -15,7 +16,7 @@ public
 			first_to_second: port first_process.dataout -> second_process.datain;
 			outgoing_data: port second_process.dataout -> dataout;
 		flows
-			end_to_end: end to end flow first_process.in_to_out -> first_to_second -> second_process.in_to_out { Latency=> 100ms..100ms;};
+			end_to_end: end to end flow first_process.in_to_out -> first_to_second -> second_process.in_to_out { Latency=> requirement_params::expected_response_time..requirement_params::expected_response_time;};
 	end computation_chain.Impl;
 
 	process First_process
