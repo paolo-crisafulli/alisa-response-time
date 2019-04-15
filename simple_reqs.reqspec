@@ -1,6 +1,19 @@
 system requirements simple_reqs for Simple_system::Computation_chain.Impl [
 	requirement R1 : "response time limit" for end_to_end [
-		val expected_response_time = 100ms
+		val expected_response_time = 100 ms
 		description this " shall have a global computation time of " expected_response_time
+	]
+
+	requirement R2 : "response time limit" [
+		val expected_response_time = 100 ms
+		description this " shall have a global computation time of " expected_response_time
+	]
+
+	requirement R3 : "response time limit" for end_to_end [
+		val expected_response_time = 100 ms
+		description this " shall have a global computation time of " expected_response_time
+		compute ActualMinLatency : Time
+		compute ActualMaxLatency : Time
+		value predicate ActualMaxLatency < expected_response_time
 	]
 ]

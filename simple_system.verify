@@ -1,7 +1,16 @@
 verification plan simple_plan for simple_reqs [
 	claim R1 [
 		activities
-		responsetime : Plugins.FlowLatencyAnalysis ( )
-		assert responsetime
+		responsetime : Plugins.EndToEndFlowLatencyAnalysis ( )
+	]
+
+	claim R2 [
+		activities
+		responsetime : Plugins.ComponentFlowLatencyAnalysis ( )
+	]
+
+	claim R3 [
+		activities
+		responsetime : ActualMinLatency, ActualMaxLatency = Plugins.ComputeEndToEndFlowLatency( )
 	]
 ] 
