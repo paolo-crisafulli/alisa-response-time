@@ -11,6 +11,6 @@ verification plan simple_plan for simple_reqs [
 
 	claim R3 [
 		activities
-		responsetime : ActualMinLatency, ActualMaxLatency = Plugins.ComputeEndToEndFlowLatency( )
+		responsetime : SOM, ActualMinLatency, ActualMaxLatency = Plugins.ComputeEndToEndFlowLatency( )
 	]
 ] 
