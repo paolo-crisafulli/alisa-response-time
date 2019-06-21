@@ -16,4 +16,5 @@ system requirements simple_reqs for Simple_system::Computation_chain.Impl [
 		compute SOM : string
 		description this " shall have a global computation time of " expected_response_time
 		value predicate ActualMaxLatency <= expected_response_time with expected_response_time downto 200 ms
+	]
 ]
